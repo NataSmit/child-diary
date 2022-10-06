@@ -1,21 +1,22 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const measureSlice = createSlice({
-  name: 'toolkit',
+  name: "toolkit",
   initialState: {
-  measures: []
+    measures: [],
   },
   reducers: {
     addMeasure(state, action) {
-      state.measures.push(action.payload)
+      state.measures.push(action.payload);
     },
     removeMeasure(state) {
-      state.measures.pop()
+      state.measures.pop();
     },
     modifyMeasures(state, action) {
-      state.measures = action.payload
-    }
-  }
-})
+      state.measures = action.payload;
+    },
+  },
+});
 
-export const {addMeasure, removeMeasure, modifyMeasures } = measureSlice.actions
+export const { addMeasure, removeMeasure, modifyMeasures } =
+  measureSlice.actions;
