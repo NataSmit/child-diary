@@ -1,0 +1,62 @@
+.measure__table-title {
+  width: 80px;
+  border: 1px solid #5B3E96;
+  border-radius: 5px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.measure__table-title_small {
+  width: 20px;
+}
+
+.measure__table {
+  width: 280px;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.measure__table-input {
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid #5B3E96;
+  border-radius: 5px;
+  position: relative;
+  width: 80px;
+  overflow: hidden;
+}
+
+.measure__table-input_small {
+  width: 20px;
+}
+
+.measure__table-edit {
+  border: none;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  background-image: url('../../images/pen.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  left: 6px;
+}
+
+.measure__delete-btn {
+  border: none;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  background-image: url('../../images/Trash.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  left: 6px;
+}

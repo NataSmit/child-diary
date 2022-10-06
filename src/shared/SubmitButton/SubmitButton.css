@@ -1,0 +1,21 @@
+.submit-button {
+  display: block;
+  background-color: #5B3E96;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  width: 180px;
+  margin: 30px auto 0;
+  color: white;
+  transition: opacity .3s;
+  cursor: pointer;
+}
+
+.submit-button:active {
+  opacity: 0.7;
+}
+
+.submit-button:disabled {
+  background-color: gray;
+  cursor: auto;
+}

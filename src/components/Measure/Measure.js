@@ -1,43 +1,54 @@
 import React, {useState} from 'react';
-import { useForm } from "react-hook-form";
+//import { useForm } from "react-hook-form";
+import MeasureTable from "../MeasureTable/MeasureTable"
+import {useDispatch, useSelector} from 'react-redux';
+import {addMeasure, removeMeasure, modifyMeasures } from '../../store/measureSlice';
+import BlockTitle from '../../shared/BlockTitle/BlockTitle';
+import SubmitButton from '../../shared/SubmitButton/SubmitButton'
 
 
 export default function Measure() {
+
+  const dispatch = useDispatch()
+  const childMeasuresRedux = useSelector(state => state.measureSlice.measures)
+
   
   const [data, setData] = useState({
     age: '',
     height: '',
-    weight: ''
+    weight: '',
+    id: Date.now()
   })
 
-  const [childMeasures, setChildMeasures] = useState([])
 
   const {age, height, weight} = data
+  const isSubmitBtnActive = age.length > 0 && height.length > 0 && weight.length > 0
+ 
   const [modifiedData, setModifiedData] = useState({
     isModified: false,
     measureIndex: null
   })
-  console.log('data:', data)
+  
 
   function handleInputs(e) {
     const {name, value} = e.target
-    setData((prevState) =>({...prevState, [name]: value}))
+    setData((prevState) =>({...prevState, [name]: value, id: Date.now()}))
   }
 
   function handleFormSubmit(e) {
     e.preventDefault()
     if (modifiedData.isModified) {
-      const modifiedChildMeasures = childMeasures;
+      const modifiedChildMeasures = [...childMeasuresRedux];
+      
       modifiedChildMeasures.splice(modifiedData.measureIndex, 1, data)
       console.log('modifiedChildMeasures', modifiedChildMeasures)
-      setChildMeasures(modifiedChildMeasures)
-      //console.log('childMeasures in submit', childMeasures)
+      dispatch(modifyMeasures(modifiedChildMeasures))
       setModifiedData({
         isModified: false,
         measureIndex: null
       })
     } else {
-      setChildMeasures((prevState) => [...prevState, data]) 
+      dispatch(addMeasure(data))
     }
     setData({
       age: '',
@@ -56,7 +67,7 @@ export default function Measure() {
   }
 
   function handleDeleteBtn(index) {
-    setChildMeasures((state) => state.filter((measure, measureIndex) => measureIndex !== index));
+    dispatch(removeMeasure())
     setData({
       age: '',
       height: '',
@@ -67,48 +78,22 @@ export default function Measure() {
       measureIndex: null
     })
   }
-  console.log('childMeasure:', childMeasures)
-
+ 
 
   return (
     <div className='measure'>
       <div className='measure__container'>
-        <h1 className='measure__title'>Измерения</h1>
+        <BlockTitle title='Измерения'/>
         <div className='measure__wrapper'>
-          <table className='measure__table'>
-            <thead>
-              <tr>
-                <th className='measure__table-title'>Возраст</th>
-                <th className='measure__table-title'>Рост</th>
-                <th className='measure__table-title'>Вес</th>
-                <th className='measure__table-title measure__table-title_small'></th>
-              </tr>
-            </thead>
-            <tbody>
-               {childMeasures.map((measure, index) => (
-                <tr>
-                  <td className='measure__table-input'>{measure.age}</td>
-                  <td className='measure__table-input'>{measure.height}</td>
-                  <td className='measure__table-input'>{measure.weight}</td>
-                  <td className='measure__table-input'>
-                    {
-                      modifiedData.isModified ? 
-                      <button className='measure__delete-btn' type='button' onClick={()=> handleDeleteBtn(index)}></button> :
-                      <button className='measure__table-edit' type='button' onClick={() => handleEditButton(measure, index)}></button>
-                    }
-                    
-            
-                  </td>
-                </tr>
-               ))}
-            </tbody>
-          </table>
+          <MeasureTable childMeasuresRedux={childMeasuresRedux} modifiedData={modifiedData} handleEditButton={handleEditButton}
+          handleDeleteBtn={handleDeleteBtn}/>
           <form className='measure__form' onSubmit={handleFormSubmit}>
-            <input className='measure__input' value={age} name='age' onChange={handleInputs}></input>
-            <input className='measure__input' value={height} name='height' onChange={handleInputs}></input>
-            <input className='measure__input' value={weight} name='weight' onChange={handleInputs}></input>
-            <button className='measure__submit-btn'>{modifiedData.isModified ? 'Изменить' : 'Сохранить'}</button>
-            
+            <div className='measure__inputs-container'>
+              <input className='measure__input' value={age} name='age' onChange={handleInputs} placeholder='Возраст'></input>
+              <input className='measure__input' value={height} name='height' onChange={handleInputs} placeholder='Рост'></input>
+              <input className='measure__input' value={weight} name='weight' onChange={handleInputs} placeholder='Вес'></input>
+            </div>
+            <SubmitButton modifiedData={modifiedData} isSubmitBtnActive={isSubmitBtnActive}/>
           </form>
         </div>
       </div>

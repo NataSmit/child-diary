@@ -3,105 +3,39 @@
   margin: 0 auto;
 }
 
-.measure__title {
-  font-size: 18px;
-  font-weight: 400;
-  border-bottom: 1px solid #DADADA;
-  padding-bottom: 10px;
-  margin: 0;
-}
-
-.measure__table-title {
-  width: 60px;
-  border: 1px solid #5B3E96;
-  padding: 5px 0;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.measure__table-title_small {
-  width: 15px;
-}
-
-.measure__table {
-  width: 280px;
-}
-
 .measure__wrapper {
-  padding-top: 40px
+  padding: 40px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .measure__form {
   padding: 40px 10px 0;
-  width: 280px
+  width: 280px;
+}
+
+.measure__inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #221738;
+  border-radius: 10px;
+  padding: 20px 0;
 }
 
 .measure__input {
-  width: 70px;
-  margin-right: 15px;
   background-color: transparent;
   color: inherit;
   border: 0;
   border-bottom: 1px solid white;
   text-align: center;
+  margin-bottom: 20px;
+  width: 150px;
 }
-
-
 
 .measure__input:last-child {
-  margin-right: 0;
-}
-
-.measure__submit-btn {
-  display: block;
-  background-color: #5B3E96;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 7px;
-  width: 180px;
-  margin: 30px auto 0;
-  color: white;
-  transition: opacity .3s;
-}
-
-.measure__submit-btn:active {
-  opacity: 0.7;
-}
-
-.measure__table-input {
-  text-align: center;
-  padding: 5px 0;
-  border: 1px solid #5B3E96;
-  position: relative;
-}
-
-
-.measure__table-edit {
-  border: none;
-  background-color: transparent;
-  width: 10px;
-  height: 10px;
-  background-image: url('../../images/pen.svg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-  position: absolute;
-  top: 10px;
-  left: 6px;
-}
-
-.measure__delete-btn {
-  border: none;
-  background-color: transparent;
-  width: 10px;
-  height: 10px;
-  background-image: url('../../images/Trash.svg');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0;
-  position: absolute;
-  top: 10px;
-  left: 6px;
+  margin-bottom: 10px;
 }
