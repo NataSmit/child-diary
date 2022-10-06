@@ -1,22 +1,25 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const vaccinationSlice = createSlice({
-  name: 'vaccination',
+  name: "vaccination",
   initialState: {
-    vaccinationDetails: []
+    vaccinationDetails: [],
   },
   reducers: {
     addVaccinationInfo(state, action) {
-      state.vaccinationDetails.push(action.payload)
+      state.vaccinationDetails.push(action.payload);
     },
     deleteVaccinationInfo(state, action) {
-      state.vaccinationDetails.splice(action.payload, 1)
+      state.vaccinationDetails.splice(action.payload, 1);
     },
     updateVaccinationDetailsArr(state, action) {
-      state.vaccinationDetails = action.payload
-    }
-  }
-  
-})
+      state.vaccinationDetails = action.payload;
+    },
+  },
+});
 
-export const {addVaccinationInfo, deleteVaccinationInfo, updateVaccinationDetailsArr} = vaccinationSlice.actions
+export const {
+  addVaccinationInfo,
+  deleteVaccinationInfo,
+  updateVaccinationDetailsArr,
+} = vaccinationSlice.actions;
