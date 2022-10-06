@@ -1,0 +1,38 @@
+.illness__container {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.illness__body {
+  padding: 40px 0 50px;
+}
+
+.illness__label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.illness__input {
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 8px;
+  color: inherit;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.illness__textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.illness__inputs-container {
+  background-color: #221738;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}

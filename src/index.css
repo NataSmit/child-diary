@@ -1,0 +1,12 @@
+@import url('./vendor/normalize.css');
+@import url('./vendor/fonts/fonts.css');
+@import url('./blocks/wrapper/wrapper.css');
+@import url('./blocks/root/root.css');
+@import url('./components/StartingPage/StartingPage.css');
+@import url('./components/Measure/Measure.css');
+@import url('./components/MeasureTable/MeasureTable.css');
+@import url('./shared/BlockTitle/BlockTitle.css');
+@import url('./components/Vaccination/Vaccination.css');
+@import url('./components/Events/Events.css');
+@import url('./components/Illness/Illness.css');
+@import url('./shared/SubmitButton/SubmitButton.css');

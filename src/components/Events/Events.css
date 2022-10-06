@@ -1,0 +1,118 @@
+.events__container {
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.events__body {
+  padding: 40px 0 50px;
+}
+
+.events__label {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.events__input {
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 8px;
+  color: inherit;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.events__textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.events__inputs-container {
+  background-color: #221738;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.events__history {
+  max-width: 280px;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: #221738;
+  position: relative;
+}
+
+.events__title {
+  color: lightgrey;
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.events__text {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+.events__block {
+  margin-bottom: 20px;
+  
+}
+
+.events__block:last-child {
+  margin-bottom: 0;
+}
+
+.events__edit-btn {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  background-image: url('../../images/pen.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  padding: 0;
+  transition: opacity .3s;
+}
+
+.events__edit-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.events__edit-btn:active {
+  opacity: 0.7;
+}
+
+.events__delete-btn {
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  background-image: url('../../images/Trash.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: opacity .3s;
+}
+
+.events__delete-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.events__delete-btn:active {
+  opacity: 0.7;
+}
