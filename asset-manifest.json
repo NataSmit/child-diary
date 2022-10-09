@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/child-diary/static/css/main.a477fb76.css",
-    "main.js": "/child-diary/static/js/main.2b7844a8.js",
+    "main.css": "/child-diary/static/css/main.6f8f034e.css",
+    "main.js": "/child-diary/static/js/main.9829cbd5.js",
     "static/js/787.4bcfbab6.chunk.js": "/child-diary/static/js/787.4bcfbab6.chunk.js",
     "static/media/Inter-Medium.woff": "/child-diary/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/child-diary/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -10,14 +10,14 @@
     "static/media/Inter-Black.woff2": "/child-diary/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/child-diary/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "index.html": "/child-diary/index.html",
-    "static/media/Trash.svg": "/child-diary/static/media/Trash.c326461d6699061e1c75.svg",
+    "static/media/Trash.svg": "/child-diary/static/media/Trash.cb04ddf56012a5509d10.svg",
     "static/media/pen.svg": "/child-diary/static/media/pen.6c7bf05444b9793fdf6e.svg",
-    "main.a477fb76.css.map": "/child-diary/static/css/main.a477fb76.css.map",
-    "main.2b7844a8.js.map": "/child-diary/static/js/main.2b7844a8.js.map",
+    "main.6f8f034e.css.map": "/child-diary/static/css/main.6f8f034e.css.map",
+    "main.9829cbd5.js.map": "/child-diary/static/js/main.9829cbd5.js.map",
     "787.4bcfbab6.chunk.js.map": "/child-diary/static/js/787.4bcfbab6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a477fb76.css",
-    "static/js/main.2b7844a8.js"
+    "static/css/main.6f8f034e.css",
+    "static/js/main.9829cbd5.js"
   ]
 }
