@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/child-diary/static/css/main.6f8f034e.css",
-    "main.js": "/child-diary/static/js/main.9829cbd5.js",
+    "main.js": "/child-diary/static/js/main.cd6a95f0.js",
     "static/js/787.4bcfbab6.chunk.js": "/child-diary/static/js/787.4bcfbab6.chunk.js",
     "static/media/Inter-Medium.woff": "/child-diary/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff": "/child-diary/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -13,11 +13,11 @@
     "static/media/Trash.svg": "/child-diary/static/media/Trash.cb04ddf56012a5509d10.svg",
     "static/media/pen.svg": "/child-diary/static/media/pen.6c7bf05444b9793fdf6e.svg",
     "main.6f8f034e.css.map": "/child-diary/static/css/main.6f8f034e.css.map",
-    "main.9829cbd5.js.map": "/child-diary/static/js/main.9829cbd5.js.map",
+    "main.cd6a95f0.js.map": "/child-diary/static/js/main.cd6a95f0.js.map",
     "787.4bcfbab6.chunk.js.map": "/child-diary/static/js/787.4bcfbab6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f8f034e.css",
-    "static/js/main.9829cbd5.js"
+    "static/js/main.cd6a95f0.js"
   ]
 }
