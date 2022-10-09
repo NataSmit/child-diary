@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import StartingPage from "./components/StartingPage/StartingPage";
 import Measure from "./components/Measure/Measure";
 import Vaccination from "./components/Vaccination/Vaccination";
@@ -7,15 +7,13 @@ import Illness from "./components/Illness/Illness";
 import Events from "./components/Events/Events";
 
 function App() {
-  const { path, url } = useRouteMatch();
-  console.log("App path:", path);
-  console.log("App url:", url);
 
+  
   return (
     <div className="wrapper">
       <div className="root">
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/child-diary">
             <StartingPage />
           </Route>
 
