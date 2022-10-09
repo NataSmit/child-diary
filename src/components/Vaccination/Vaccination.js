@@ -45,6 +45,10 @@ export default function Vaccination() {
       const modifiedVaccinationInfoArr = [...vaccinationInfoArr];
       modifiedVaccinationInfoArr.splice(modifiedData.index, 1, vaccinationInfo);
       dispatch(updateVaccinationDetailsArr(modifiedVaccinationInfoArr));
+      setModifiedData({
+        isModified: false,
+        measureIndex: null,
+      });
     } else {
       dispatch(addVaccinationInfo(vaccinationInfo));
     }

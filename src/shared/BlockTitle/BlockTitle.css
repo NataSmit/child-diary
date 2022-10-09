@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #DADADA;
-  padding: 10px 0;
+  padding: 15px 0 10px;
 }
 
 .block__link {

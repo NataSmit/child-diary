@@ -67,7 +67,7 @@ export default function Measure() {
   }
 
   function handleDeleteBtn(index) {
-    dispatch(removeMeasure());
+    dispatch(removeMeasure(index));
     setData({
       age: "",
       height: "",

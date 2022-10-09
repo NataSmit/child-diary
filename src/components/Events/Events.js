@@ -32,6 +32,10 @@ export default function Events() {
       const modifiedEvents = [...events];
       modifiedEvents.splice(modifiedData.index, 1, eventsData);
       dispatch(updateEvents(modifiedEvents));
+      setModifiedData({
+        isModified: false,
+        measureIndex: null,
+      });
     } else {
       dispatch(addEvent(eventsData));
     }

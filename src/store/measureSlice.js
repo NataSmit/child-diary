@@ -9,8 +9,8 @@ export const measureSlice = createSlice({
     addMeasure(state, action) {
       state.measures.push(action.payload);
     },
-    removeMeasure(state) {
-      state.measures.pop();
+    removeMeasure(state, action) {
+      state.measures.splice(action.payload, 1);
     },
     modifyMeasures(state, action) {
       state.measures = action.payload;
