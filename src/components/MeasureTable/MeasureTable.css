@@ -9,6 +9,10 @@
 
 .measure__table-title_small {
   width: 20px;
+  background-image: url('../../images/spanner-min.svg');
+  background-repeat: no-repeat;
+  background-repeat: cover;
+  background-position: center;
 }
 
 .measure__table {
