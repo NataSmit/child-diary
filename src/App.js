@@ -13,7 +13,7 @@ function App() {
     <div className="wrapper">
       <div className="root">
         <Switch>
-          <Route exact path="/child-diary">
+          <Route exact path="/">
             <StartingPage />
           </Route>
 
