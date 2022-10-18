@@ -7,6 +7,7 @@ import {
   updateVaccinationDetailsArr,
 } from "../../store/vaccinationSlice";
 import { useSelector, useDispatch } from "react-redux";
+import InfoBlock from "../../shared/InfoBlock/InfoBlock";
 const vaccinationDefaultState = {
   date: "",
   vaccinationName: "",
@@ -18,7 +19,8 @@ export default function Vaccination() {
     isModified: false,
     index: null,
   });
-
+  
+  const vaccination = true;
   const dispatch = useDispatch();
   const [vaccinationInfo, setVaccinationInfo] = useState(
     vaccinationDefaultState
@@ -56,7 +58,6 @@ export default function Vaccination() {
   }
 
   function handleEditBtn(vaccinationCard, index) {
-    console.log("vaccinationCard", vaccinationCard);
     setVaccinationInfo(vaccinationCard);
     setModifiedData({
       isModified: true,
@@ -74,34 +75,19 @@ export default function Vaccination() {
         <BlockTitle title="Прививки" />
         <div className="vaccination__body">
           {vaccinationInfoArr.map((vaccinationObject, index) => (
-            <div className="vaccination__history" key={index}>
-              <button
-                type="button"
-                className="vaccination__edit-btn"
-                onClick={() => handleEditBtn(vaccinationObject, index)}
-              ></button>
-              <button
-                type="button"
-                className="vaccination__delete-btn"
-                onClick={() => handleDeleteBtn(index)}
-              ></button>
-              <div className="vaccination__block">
-                <p className="vaccination__title"> Дата:</p>
-                <p className="vaccination__text">{vaccinationObject.date}</p>
-              </div>
-              <div className="vaccination__block">
-                <p className="vaccination__title"> Прививка:</p>
-                <p className="vaccination__text">
-                  {vaccinationObject.vaccinationName}
-                </p>
-              </div>
-              <div className="vaccination__block">
-                <p className="vaccination__title"> Реакция:</p>
-                <p className="vaccination__text">
-                  {vaccinationObject.vaccinationReaction}
-                </p>
-              </div>
-            </div>
+            <InfoBlock
+              handleEditBtn={handleEditBtn}
+              handleDeleteBtn={handleDeleteBtn}
+              index={index}
+              InfoObj={vaccinationObject}
+              key={index}
+              vaccination={vaccination}
+              treatment={false}
+              titleName={"Прививка"}
+              titleDescription={"Реакция"}
+              textName={vaccinationObject.vaccinationName}
+              textDescription={vaccinationObject.vaccinationReaction}
+            />
           ))}
 
           <form className="vaccination__form" onSubmit={handleFormSubmit}>
